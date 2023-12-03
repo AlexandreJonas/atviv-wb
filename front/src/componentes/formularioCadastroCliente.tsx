@@ -36,7 +36,7 @@ export default function FormularioCadastroCliente(props: props) {
         }));
     };
 
-    const deletar = async() => {
+    const deletar = async(e:any) => {
         try {
             const response = await fetch(`http://localhost:32832/cliente/excluir`, {
                 method: "DELETE",
@@ -46,6 +46,7 @@ export default function FormularioCadastroCliente(props: props) {
         } catch (error:any) {
             console.log(error.message)
         }
+        props.seletorView(0,'Clientes', e) 
     }
 
     const inserir = async () => {
@@ -60,6 +61,7 @@ export default function FormularioCadastroCliente(props: props) {
             } else {
                 throw new Error("Erro ao inserir cliente");
             }
+            
         } catch (error: any) {
             console.log(error.message)
         }
@@ -82,14 +84,14 @@ export default function FormularioCadastroCliente(props: props) {
         }
     }
 
-    const salvar = () => {
-        console.log('salvar: ' + JSON.stringify(cliente))
+    const salvar = (e:any) => {
         if (props.id !== 0) {
             atualizar()
         }
         else {
             inserir()
         }
+       props.seletorView(0,'Clientes', e)   
     }
 
     let estiloBotao = `btn waves-effect waves-light col left ${props.tema}`
@@ -120,13 +122,13 @@ export default function FormularioCadastroCliente(props: props) {
             </form>
             <div className="">
                 <div className="row">
-                    <button className={estiloBotao} onClick={salvar}>Salvar
+                    <button className={estiloBotao} onClick={ (e) => salvar(e)}>Salvar
                         <i className="material-icons right">send</i>
                     </button>
 
                     <a className="col s1 left"> </a>
 
-                    <button className={estiloBotao} onClick={deletar}>Deletar
+                    <button className={estiloBotao} onClick={ (e) => deletar(e)}>Deletar
                         <i className="material-icons right">clear</i>
                     </button>
                 </div>
