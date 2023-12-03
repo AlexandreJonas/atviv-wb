@@ -108,6 +108,37 @@ export default function FormularioCadastroCliente(props: props) {
                         <label htmlFor="last_name">Sobrenome</label>
                     </div>
                 </div>
+                {/* <div className="row">
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.estado} onChange={handleChange} id="endereco_estado" type="text" className="validate" name='estado' />
+                        <label htmlFor="endereco_estado">estado</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.cidade} onChange={handleChange} id="endereco_cidade" type="text" className="validate" name='cidade' />
+                        <label htmlFor="endereco_cidade">cidade</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.bairro} onChange={handleChange} id="endereco_bairro" type="text" className="validate" name='bairro' />
+                        <label htmlFor="endereco_bairro">bairro</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.rua} onChange={handleChange} id="endereco_rua" type="text" className="validate" name='rua' />
+                        <label htmlFor="endereco_rua">rua</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.numero} onChange={handleChange} id="endereco_numero" type="text" className="validate" name='numero' />
+                        <label htmlFor="endereco_numero">numero</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.codigoPostal} onChange={handleChange} id="endereco_codigo_postal" type="text" className="validate" name='codigoPostal' />
+                        <label htmlFor="endereco_codigo_postal">codigo postal</label>
+                    </div>
+                    <div className="input-field col s6">
+                        <input defaultValue={cliente.endereco.informacoesAdicionais} onChange={handleChange} id="endereco_info" type="text" className="validate" name='InfoAdicional' />
+                        <label htmlFor="endereco_info">informacoes adicionais</label>
+                    </div>
+                </div>  */}
+
                 <div className="row">
                     <div className="input-field col s6">
                         <input id="telefone" type="text" className="validate" />
